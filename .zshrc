@@ -5,6 +5,11 @@ alias tablet='emulator @Nexus_9_API_28'
 alias emulators='emulator -list-avds'
 alias coffee='caffeinate -t -d -i $1' 
 
+# Remote Device Alias
+rd() {
+   adb tcpip 5555 && adb connect $1
+}
+
 ############# Maven and Java config #############
 MAVEN_HOME=/opt/apache-maven-3.6.3
 PATH=$MAVEN_HOME/bin:$PATH
